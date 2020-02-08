@@ -1,0 +1,17 @@
+﻿@model IEnumerable<eShop.Models.Product>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Products</title>
+    </head>
+        <body>
+            @foreach (var product in Model)
+            { 
+            <div>
+                <h2>@product.Name</h2>
+                <h3>@product.Price.ToString("c")</h3>
+                <h4>@product.Category.CategoryName</h4>
+            </div>
+            }
+        </body>
+    </html>
